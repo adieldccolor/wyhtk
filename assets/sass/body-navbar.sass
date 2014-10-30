@@ -1,6 +1,4 @@
 /* body-navbar.sass */
-
-
 .myNavbar
 	background-color: white
 	border-width: 0px
@@ -11,11 +9,13 @@
 			.navbar-toggle
 				float: left
 				margin-left: 20px
+				margin-top: 13px
 		.navbar-collapse
 			width: 820px
 			.nav
+				width: 100%
 				li
-					width: 180px
+					width: 23%
 					text-align: center
 					&:first-child
 						margin-left: 40px
@@ -29,5 +29,55 @@
 						margin-top: 12px
 						font-size: 14px
 						color: #666666
+						&.active
+							color: #5471CF !important
 						&:hover
-							color: #5471CF					
+							color: #5471CF
+@media (min-width: 768px) and (max-width: 991px)
+	.myNavbar		
+		.container
+			margin: 0 10px
+			padding: 0
+			width: 100%
+			.navbar-header
+				.navbar-toggle
+			.navbar-collapse
+				width: 691px
+				.nav
+					li
+						width: 145px
+						&:first-child
+							margin-left: 20px
+						&:last-child
+						a
+@media (min-width: 320px) and (max-width: 767px)
+	.myNavbar		
+		.container
+			.navbar-header
+				.navbar-toggle
+					background-color: transparent
+					border: none
+					border-radius: 0
+					&:hover
+						background-color: transparent
+						border: none
+						border-radius: 0
+					.icon-bar
+						background-color: #5471CF
+						width: 37px
+						height: 4px
+			.navbar-collapse
+				background-color: #C8C8C8			
+				.nav
+					li
+						width: 43%
+						&:first-child
+							margin-left: 0
+						&:last-child
+							width: 43%
+						a
+			.pull-left:last-child
+				position: absolute
+				z-index: 900
+				top: 0
+				right: 20px

@@ -3,6 +3,7 @@
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/animatescroll.min.js"></script>
 	<script type="text/javascript">
+		
 		function showModal (id,idShow) {
 			$('#'+id).on('click', function () {
 				var a,b,c,d,f,g;
@@ -25,6 +26,18 @@
 				$('#hoster-2').hide('slow');
 				$('#hoster-1').show('slow');
 			});
+			var menu = {
+			    menuLinks: function(){
+			        menuItem.on('click', 'ul li a', function(e){
+			        e.preventDefault(); e.stopPropagation();
+			            var caja = $(this).attr('href');
+			            menuItem.find('ul li a').removeClass('active');
+			            $(this).addClass('active');
+			        });
+			    }
+			}
+			var menuItem = $('.navbar-collapse');
+			menu.menuLinks();
 		});
 	</script>
 </body>
