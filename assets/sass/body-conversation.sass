@@ -1,6 +1,8 @@
 .conversation
-	height: 400px !important
+	min-height: 400px !important
 	background-color: white
+	padding-left: 0
+	padding-right: 0
 	.icon
 		margin: 0 auto
 	p
@@ -19,3 +21,9 @@
 			font-size: 16px
 			letter-spacing: 1.1px
 			color: #FFFFFF
+
+@media screen and (max-width: 767px)
+	.conversation
+		p
+			&.roboto-46
+				line-height: 1em
