@@ -62,12 +62,26 @@ app = {
 			 	 _self.active([]);
 			});
 		}
+	}, menu: function(){
+		var menu = {
+			    menuLinks: function(){
+			        menuItem.on('click', 'ul li a', function(e){
+			        e.preventDefault(); e.stopPropagation();
+			            var caja = $(this).attr('href');
+			            menuItem.find('ul li a').removeClass('active');
+			            $(this).addClass('active');
+			        });
+			    }
+			}
+			var menuItem = $('.navbar-collapse');
+			menu.menuLinks();
+
+			var menuClone = $('[role="navigation"]').first().clone();
+			menuClone.css({position: 'relative'});
+			$('[role="navigation"]').first().before(menuClone);
 	}, init: function(){
 		this.hosterModal.init();
-
-		var menuClone = $('[role="navigation"]').first().clone();
-		menuClone.css({position: 'relative'});
-		$('[role="navigation"]').first().before(menuClone);
+		this.menu();
 	}
 }
 
