@@ -6,7 +6,7 @@ app = {
 			var _self = this,
 				hosterModalElement = $('#showHoster');
 
-			$('a[rel="hoster_modal"]').on('click', function(e){
+			$('a[rel="hoster_modal"]').on('click touch tap', function(e){
 				e.preventDefault(); e.stopPropagation();
 				_self.trigger($(this));
 			});
