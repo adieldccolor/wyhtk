@@ -20,6 +20,17 @@ app = {
 				})()
 			}
 		},
+		active: function(set){
+			if(set!=undefined){
+				$('body').find('[rel="hoster_modal"].active-hoster').removeClass('active-hoster');
+				if(typeof set == 'object' && set.length>0){
+					set.addClass('active-hoster');
+				}
+				return set;
+			}else{
+				return $('body').find('[rel="hoster_modal"].active-hoster');
+			}
+		},
 		trigger: function(hosterTarget){
 			var _self = this,
 				_target = hosterTarget,
@@ -31,6 +42,7 @@ app = {
 					picture_url: _target.find('[rel="hoster_picture"]').attr('src')
 				};
 
+				_self.active(hosterTarget);
 				_self.open(info);
 				_self.enableClose(info);
 		}, open: function(info){
@@ -43,9 +55,11 @@ app = {
 											.replace(/data-src/g, "src");
 			modalTemplate._object.find('.descripcion').html(newTemplate).end().addClass('md-show');
 		}, enableClose: function(){
+			var _self = this;
 			$('.container > .icon-close').on('click',function () {
 			 	 var b = $(this).attr('data-id');
 			 	 $('#'+b).removeClass('md-show');
+			 	 _self.active([]);
 			});
 		}
 	}, init: function(){
