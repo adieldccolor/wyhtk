@@ -1,15 +1,13 @@
 .hero
-	height: 560px !important
+	min-height: 560px !important
 	background-color: #7b7b83
 	background-image: url("../img/background.png")
 	.container
 		.logo-small
-			height: 40px
 			width: 205px
 			margin: 0 auto
 			display: block
 		.logo-big
-			height: 246px
 			width: 677px
 			display: block		
 			margin: 30px auto 50px auto
@@ -36,3 +34,16 @@
 	display: block
 	position: absolute
 	left: 50%
+
+@media screen and (max-width: 767px)
+	.divider
+		position: relative
+		left: 0
+		height: 1px
+		width: 100%
+		margin: 20px 0
+
+	.hero
+		.container
+			.description
+				padding: 0
