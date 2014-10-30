@@ -64,6 +64,10 @@ app = {
 		}
 	}, init: function(){
 		this.hosterModal.init();
+
+		var menuClone = $('[role="navigation"]').first().clone();
+		menuClone.css({position: 'relative'});
+		$('[role="navigation"]').first().before(menuClone);
 	}
 }
 
