@@ -5,10 +5,13 @@
           <p class="sub-title">Click On Pictures to learn more</p>
           <div id="hoster-1" class="col-md-12">            
             <div class="col-md-4">
-              <img id="mailet" class="hosterImg" src="static/host-mailet.jpg" alt="" style=" width: 250px; height: 225px;">
-              <h3>MAILET LOPEZ</h3>
-              <p>Director of Advertiser</p>
-              <p>Solutions, Microsoft</p>
+              <a href="#" rel="hoster_modal">
+                <img id="mailet" rel="hoster_picture" class="hosterImg" src="static/host-mailet.jpg" alt="" style=" width: 250px; height: 225px;">
+                <h3 rel="hoster_name">MAILET LOPEZ</h3>
+                <p rel="hoster_title">Director of Advertiser</p>
+                <p rel="hoster_role">Solutions, Microsoft</p>
+                <div class="hidden" role="hoster_bio"><p>Mailet is the co-founder of <em>Squeaky Wheel Media</em>, an <br> award-winning interactive digital agency, and the founder of <em>IHadCancer.com</em>, a life-saving social network  for cancer fighters, suvivors and supporters. She has garnered major industry recognition, including the "Trendsetter of the Year" award from The American Advertising Federation and the "Entrepreneur of the Year" award from The Stevie Awards.</p></div>
+              </a>
             </div>
             <div class="col-md-4">
               <img id="stephanie" class="hosterImg" src="static/host-stephanie.jpg" alt="" style=" width: 250px; height: 225px;">          
@@ -51,31 +54,25 @@
           </div>          
       </div>      
   </div> 
-  <div id="showMailet" class="myModal md-effect-2">
+  <div id="showHoster" class="myModal md-effect-2">
     <div class="container">
-      <span data-id="showMailet" class="pull-right icon icon-close"></span>
+      <span data-id="showHoster" class="pull-right icon icon-close"></span>
         <div class="col-md-12 descripcion">
           <div class="col-md-8">
-            <h2>MAILET LOPEZ</h2> 
-            <p class="sub-title">Squeaky Wheel Media, Co-Founder</p>
-            <p class="sub-title">IHadCancer, Founder/CEO</p>
+            <h2>{{hoster.name}}</h2> 
+            <p class="sub-title">{{hoster.title}}</p>
+            <p class="sub-title">{{hoster.role}}</p>
             <div class="divider-h"></div>
-            <p>Mailet is the co-founder of <em>Squeaky Wheel Media</em>, an <br> 
-            award-winning interactive digital agency, and the founder
-            of <em>IHadCancer.com</em>, a life-saving social network 
-            for cancer fighters, suvivors and supporters. She has garnered major industry
-            recognition, including the "Trendsetter of the Year" award from
-            The American Advertising Federation and the "Entrepreneur of the Year" award from The Stevie Awards.
-            </p>
+            {{hoster.bio}}
           </div>
           <div class="col-md-4">
-            <img src="static/host-mailet.jpg" style="width:313px; height:280px">
+            <img src="{{hoster.picture_url}}" style="width:313px; height:280px">
           </div>
         </div>
         <div class="col-md-12">
           <p>
               <button class="btn btn-primary btn-gray" href="#contact">PREVIOUS</button>           
-              <button class="btn btn-primary btn-blue" href="#contact">NETX</button>           
+              <button class="btn btn-primary btn-blue" href="#contact">NEXT</button>           
           </p>
         </div>
     </div>
