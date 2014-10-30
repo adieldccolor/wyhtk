@@ -41,15 +41,19 @@
 			width: 100%
 			.navbar-header
 				.navbar-toggle
+					background-color: #C8C8C8
+					margin: 0
+					padding: 20px
+				.navbar-toggle.collapsed
+					background-color: white	
 			.navbar-collapse
 				width: 691px
+				border: none
 				.nav
 					li
 						width: 23%
 						&:first-child
-							margin-left: 20px
-						&:last-child
-						a
+							margin-left: 20px						
 @media (min-width: 320px) and (max-width: 767px)
 	.myNavbar		
 		.container
@@ -58,23 +62,28 @@
 					background-color: transparent
 					border: none
 					border-radius: 0
-					&:hover
-						background-color: transparent
+					background-color: #C8C8C8
+					margin: 0
+					padding: 20px			
+					&:hover						
 						border: none
 						border-radius: 0
 					.icon-bar
 						background-color: #5471CF
 						width: 37px
 						height: 4px
+				.navbar-toggle.collapsed
+					background-color: white				
 			.navbar-collapse
-				background-color: #C8C8C8			
+				background-color: #C8C8C8
+				border: none		
 				.nav
 					li
-						width: 37%
+						width: 39%
 						&:first-child
 							margin-left: 0
 						&:last-child
-							width: 37%
+							width: 39%
 						a
 			.pull-left:last-child
 				position: absolute
