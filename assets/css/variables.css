@@ -1,0 +1,115 @@
+/* variables.sass */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,900|Open+Sans:700,600,400);
+body {
+  padding-top: 75px; }
+
+.btn-blue {
+  border: 0px;
+  border-radius: 0px;
+  padding: 10px 24px;
+  background-color: #5471cf;
+  margin-top: 12px;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  width: 180px;
+  height: 40px;
+  letter-spacing: 1.1px; }
+  .btn-blue:hover {
+    background-color: #5471cf; }
+  .btn-blue:active {
+    background-color: #5471cf;
+    border-color: #5471cf; }
+  .btn-blue:focus {
+    background-color: #5471cf;
+    border-color: #5471cf;
+    outline: none;
+    outline-offset: 0; }
+  .btn-blue:focus:active {
+    background-color: #5471cf;
+    border-color: #5471cf;
+    outline: none;
+    outline-offset: 0; }
+
+.btn-gray {
+  border: 0px;
+  border-radius: 0px;
+  padding: 10px 24px;
+  background-color: #9797a6;
+  margin-top: 12px;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  width: 180px;
+  height: 40px;
+  letter-spacing: 1.1px; }
+  .btn-gray:hover {
+    background-color: #9797a6; }
+  .btn-gray:active {
+    background-color: #9797a6;
+    border-color: #9797a6; }
+  .btn-gray:focus {
+    background-color: #9797a6;
+    border-color: #9797a6;
+    outline: none;
+    outline-offset: 0; }
+  .btn-gray:focus:active {
+    background-color: #9797a6;
+    border-color: #9797a6;
+    outline: none;
+    outline-offset: 0; }
+
+.jumbotron {
+  margin-bottom: 0px; }
+
+.font-roboto {
+  font-family: "Roboto", sans-serif; }
+
+.font-opensans {
+  font-family: "Open Sans", sans-serif; }
+
+.divider-h2 {
+  height: 1px;
+  background-color: #c8c8c8;
+  width: 980px;
+  display: block;
+  margin: 50px auto 30px auto; }
+
+.symbol {
+  content: "*";
+  color: #ff7300;
+  font-family: "Open Sans", sans-serif; }
+
+.icon {
+  background: url("../img/sprite.png") no-repeat top left;
+  display: block; }
+
+.icon-conversation {
+  background-position: 0px 0px;
+  height: 79px;
+  width: 141px; }
+
+.icon-envelope {
+  background-position: -161px 0px;
+  width: 100px;
+  height: 67px; }
+
+.icon-marker {
+  background-position: -281px 0px;
+  width: 59px;
+  height: 78px; }
+
+.icon-next-i {
+  background-position: -360px 0px;
+  width: 16px;
+  height: 30px; }
+
+.icon-prev-i {
+  background-position: -396px 0px;
+  width: 16px;
+  height: 30px; }
+
+.icon-close {
+  background-position: -432px 0px;
+  width: 34px;
+  height: 34px; }
