@@ -76,9 +76,9 @@ app = {
 			var menuItem = $('.navbar-collapse');
 			menu.menuLinks();
 
-			var menuClone = $('[role="navigation"]').first().clone();
-			menuClone.css({position: 'relative'});
-			$('[role="navigation"]').first().before(menuClone);
+			// var menuClone = $('[role="navigation"]').first().clone();
+			// menuClone.css({position: 'relative'});
+			// $('[role="navigation"]').first().before(menuClone);
 	}, coverBackgrounds: function(){
 		$(".hosters,.hero").backstretch("assets/img/background.png");
 		$(".locations").backstretch("assets/img/locationbg.jpg");
