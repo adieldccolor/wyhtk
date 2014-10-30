@@ -75,6 +75,11 @@ body {
   display: block;
   margin: 50px auto 30px auto; }
 
+.symbol {
+  content: "*";
+  color: #ff7300;
+  font-family: "Open Sans", sans-serif; }
+
 .icon {
   background: url("../img/sprite.png") no-repeat top left;
   display: block; }
