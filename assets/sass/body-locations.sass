@@ -1,5 +1,5 @@
-.locations
-	height: 500px !important
+.jumbotron.locations
+	min-height: 500px
 	background-image: url(../img/locationbg.jpg)
 	background-position:center
 	background-repeat: no-repeat
@@ -9,13 +9,17 @@
 			top: 125px
 			left: 200px
 		.box
-			width: 340px
-			height: 340px
+			width: 100%
+			height: auto
 			display: block
 			margin: -45px auto
 			background-color: $button-blue
 			display: block
 			padding-top: 45px
+			padding-bottom: 45px
+			max-width: 340px
+			z-index: 9
+			position: relative
 			p
 				font-family: $font-primary
 				font-weight: 600
@@ -35,3 +39,22 @@
 			width: 255px
 			display: block
 			margin: 50px auto 40px auto
+
+@media screen and (max-width: 767px)
+	.jumbotron.locations
+		padding: 150px 0 0 0
+		min-height: 100px
+		.container
+			.box
+				margin: 0
+				max-width: 100%
+				margin-bottom: 20px
+
+
+@media screen and (max-width: 767px)
+	.jumbotron.locations
+		.container
+			margin: 0
+			padding: 0
+			.box
+				margin-bottom: 0px
