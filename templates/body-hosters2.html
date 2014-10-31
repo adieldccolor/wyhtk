@@ -4,27 +4,27 @@
   	 <h2>Host</h2>
           <p class="sub-title">Click On Pictures to learn more</p>
           <div id="hoster-1" class="col-md-12">            
-            <div class="col-md-4 hoster">
+            <div class="col-md-4 col-sm-4 col-xs-12 hoster">
               <a href="#" rel="hoster_modal">
-                <img id="mailet" rel="hoster_picture" class="hosterImg" src="static/host-mailet.jpg" alt="" style=" width: 250px; height: 225px;">
+                <img id="mailet" rel="hoster_picture" class="hosterImg" src="static/host-mailet.jpg" alt="" style=" width: 250px; max-width: 100%">
                 <h3 rel="hoster_name">MAILET LOPEZ</h3>
                 <p rel="hoster_title">Director of Advertiser</p>
                 <p rel="hoster_role">Solutions, Microsoft</p>
                 <div class="hidden" rel="hoster_bio"><p>Mailet is the co-founder of <em>Squeaky Wheel Media</em>, an <br> award-winning interactive digital agency, and the founder of <em>IHadCancer.com</em>, a life-saving social network  for cancer fighters, suvivors and supporters. She has garnered major industry recognition, including the "Trendsetter of the Year" award from The American Advertising Federation and the "Entrepreneur of the Year" award from The Stevie Awards.</p></div>
               </a>
             </div>
-            <div class="col-md-4 hoster">
+            <div class="col-md-4 col-sm-4 col-xs-12 hoster">
               <a href="#" rel="hoster_modal">
-                <img rel="hoster_picture" id="stephanie" class="hosterImg" src="static/host-stephanie.jpg" alt="" style=" width: 250px; height: 225px;">          
+                <img rel="hoster_picture" id="stephanie" class="hosterImg" src="static/host-stephanie.jpg" alt="" style=" width: 250px; max-width: 100%">          
                 <h3 rel="hoster_name">STEPHANIE LAWRENCE </h3>
                 <p rel="hoster_title">Director of Advertiser</p>
                 <p rel="hoster_role">Solutions, Microsoft</p>
                 <div class="hidden" rel="hoster_bio"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, molestias aut nesciunt nam dolore voluptates corporis magni labore neque quisquam iusto ullam beatae mollitia saepe cum facilis itaque laboriosam pariatur!</p></div>
               </a>
             </div>
-            <div class="col-md-4 hoster">
+            <div class="col-md-4 col-sm-4 col-xs-12 hoster">
               <a href="#" rel="hoster_modal">
-                <img rel="hoster_picture" id="julie" class="hosterImg" src="static/host-julie.jpg" alt="" style=" width: 250px; height: 225px;">          
+                <img rel="hoster_picture" id="julie" class="hosterImg" src="static/host-julie.jpg" alt="" style=" width: 250px; max-width: 100%">          
                 <h3 rel="hoster_name">JULIE SILCOX</h3>
                 <p rel="hoster_title">Chief Marketing Officer</p>
                 <p rel="hoster_role">WisdomTree</p>  
@@ -36,18 +36,18 @@
         		</p>          
           </div>
           <div id="hoster-2" class="col-md-12">            
-            <div class="col-md-4 hoster">
+            <div class="col-md-4 col-sm-4 col-xs-12 hoster">
               <a href="#" rel="hoster_modal">
-                <img rel="hoster_picture" id="melanie" class="hosterImg" src="static/host-melanie.jpg" alt="" style=" width: 250px; height: 225px;">
+                <img rel="hoster_picture" id="melanie" class="hosterImg" src="static/host-melanie.jpg" alt="" style=" width: 250px; max-width: 100%">
                 <h3 rel="hoster_name">MELANIE YOUNG</h3>
                 <p rel="hoster_title">The Connected Table,</p>
                 <p rel="hoster_role">Founder/CEO</p>
                 <div class="hidden" rel="hoster_bio"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, praesentium, explicabo, rem soluta voluptatum voluptatibus possimus saepe illo eaque ipsam sunt ea consectetur cum quidem libero modi tempore voluptates voluptate!</p></div>
               </a>
             </div>
-            <div class="col-md-4 hoster">
+            <div class="col-md-4 col-sm-4 col-xs-12 hoster">
               <a href="#" rel="hoster_modal">
-                <img rel="hoster_picture" id="susan" class="hosterImg" src="static/host-susan.jpg" alt="" style=" width: 250px; height: 225px;">          
+                <img rel="hoster_picture" id="susan" class="hosterImg" src="static/host-susan.jpg" alt="" style=" width: 250px; max-width: 100%">          
                 <h3 rel="hoster_name">SUSAN  BRATTON </h3>
                 <p rel="hoster_title">Meals to Heal</p>
                 <p rel="hoster_role">Founder/CEO</p>
@@ -55,9 +55,9 @@
 
               </a>
             </div>
-            <div class="col-md-4 hoster">
+            <div class="col-md-4 col-sm-4 col-xs-12 hoster">
               <a href="#" rel="hoster_modal">
-                <img rel="hoster_picture" id="sarah" class="hosterImg" src="static/host-sarah.jpg" alt="" style=" width: 250px; height: 225px;">          
+                <img rel="hoster_picture" id="sarah" class="hosterImg" src="static/host-sarah.jpg" alt="" style=" width: 250px; max-width: 100%">          
                 <h3 rel="hoster_name">SARAH EVANS</h3>
                 <p rel="hoster_title">J Public Relations</p>
                 <p rel="hoster_role">Partner</p>   
@@ -74,19 +74,19 @@
   <div id="showHoster" class="myModal md-effect-2">
     <div class="container">
       <span data-id="showHoster" class="pull-right icon icon-close"></span>
-        <div class="col-md-12 descripcion">
-          <div class="col-md-8">
+        <div class="col-md-12 descripcion clearfix">
+          <div class="col-md-4 col-sm-4 pull-right col-xs-12">
+            <img data-src="{{hoster.picture_url}}" style="width:313px; max-width: 100%">
+          </div>
+          <div class="col-md-8 col-sm-8 col-xs-12">
             <h2>{{hoster.name}}</h2> 
             <p class="sub-title">{{hoster.title}}</p>
             <p class="sub-title">{{hoster.role}}</p>
             <div class="divider-h"></div>
             {{hoster.bio}}
           </div>
-          <div class="col-md-4">
-            <img data-src="{{hoster.picture_url}}" style="width:313px; height:280px">
-          </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12 clearfix">
           <p>
               <button class="btn btn-primary btn-gray" href="#contact">PREVIOUS</button>           
               <button class="btn btn-primary btn-blue" href="#contact">NEXT</button>           

@@ -53,12 +53,14 @@ app = {
 											.replace(/{{hoster\.picture_url}}/g, info.picture_url)
 											.replace(/{{hoster\.bio}}/g, info.bio)
 											.replace(/data-src/g, "src");
-			modalTemplate._object.find('.descripcion').html(newTemplate).end().addClass('md-show');
+			modalTemplate._object.find('.descripcion').html(newTemplate).end().addClass('md-show').prev('.container').hide();
+			$('.hosters').addClass('md-open');
 		}, enableClose: function(){
 			var _self = this;
 			$('.container > .icon-close').on('click',function () {
 			 	 var b = $(this).attr('data-id');
-			 	 $('#'+b).removeClass('md-show');
+			 	 $('#'+b).removeClass('md-show').prev('.container').show();
+			 	 $('.hosters').removeClass('md-open');
 			 	 _self.active([]);
 			});
 		}

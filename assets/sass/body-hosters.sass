@@ -1,11 +1,13 @@
 .hosters
-	height: 670px !important
+	min-height: 200px !important
 	background-color: #7b7b83
 	background-image: url("../img/background.png")
 	padding-top: 20px
 	padding-left: 0px
 	padding-right: 0px
 	overflow: hidden
+	&.md-open
+		padding: 0
 	.container
 		position: relative
 		z-index: 600
@@ -49,25 +51,36 @@
 					font-size: 16px	
 			#hoster-2
 				display: none
-@media (min-width: 768px) and (max-width: 991px)
+
+.clearfix
+	display: block
+	float: none
+	clear: both
+
+@media screen and (max-width: 991px)
  
-@media (min-width: 320px) and (max-width: 767px)
+@media screen and (max-width: 767px)
 	.hosters
-		height: 600px !important
+		min-height: 200px !important
 		padding: 30px 0
 		overflow: hidden
 		.container
 			.row
 				#hoster-1, #hoster-2
-					width: 920px
+					// width: 920px
 					.col-md-4
-						display: inline-block
-						float: left						
+						display: block
+						float: none	
+						width: 100%					
 					.p-btn
-						width: 280px
+						// width: 280px
 						button
 							margin-top: 41px !important
+
+			.hoster
+				margin-bottom: 50px
 		img.hosterImg
-			width: 200px !important
-			height: 190px !important
-			margin: 0 25px !important					
+			width: 200px
+			max-width: 100%
+			margin: 0 auto					
+			padding: 0 25px
