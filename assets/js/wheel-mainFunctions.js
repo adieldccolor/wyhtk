@@ -142,9 +142,11 @@ $(function(){
 	$('#btn-hoster-1').on('click',function  () {
 		$('#hoster-1,#hoster-1-c').hide(0);
 		$('#hoster-2,#hoster-2-c').show('slow');
+		$('html,body').stop(true,false).animate({scrollTop: $('#host').position().top-70},500);
 	});
 	$('#btn-hoster-2').on('click',function  () {
 		$('#hoster-2,#hoster-2-c').hide('slow');
 		$('#hoster-1,#hoster-1-c').show('slow');
+		$('html,body').stop(true,false).animate({scrollTop: $('#host').position().top-70},500);
 	});
 });
