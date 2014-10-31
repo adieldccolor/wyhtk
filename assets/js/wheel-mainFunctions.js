@@ -5,7 +5,7 @@ app = {
 		init: function(){
 			var _self = this,
 				hosterModalElement = $('#showHoster');
-
+			$('#hoster-2,#hoster-2-c').hide();
 			$('a[rel="hoster_modal"]').on('click touch tap', function(e){
 				e.preventDefault(); e.stopPropagation();
 				_self.trigger($(this));
@@ -105,6 +105,15 @@ $(function(){
 	      itemsTablet : [767,2],
 	      itemsMobile : [480,1]
 	  });
+	   owls = $("#hoster-1,#hoster-2");
+	  owls.owlCarousel({
+	      //autoPlay: 3000, //Set AutoPlay to 3 seconds
+	      items : 3,
+	      itemsDesktop : [1199,3],
+	      itemsDesktopSmall : [979,2],
+	      itemsTablet : [767,2],
+	      itemsMobile : [480,1]
+	  });
 	 
 	  // Custom Navigation Events
 	  $(".next").click(function(e){
@@ -121,11 +130,11 @@ $(function(){
 	app.init();
 
 	$('#btn-hoster-1').on('click',function  () {
-		$('#hoster-1').hide(0);
-		$('#hoster-2').show('slow');
+		$('#hoster-1,#hoster-1-c').hide(0);
+		$('#hoster-2,#hoster-2-c').show('slow');
 	});
 	$('#btn-hoster-2').on('click',function  () {
-		$('#hoster-2').hide('slow');
-		$('#hoster-1').show('slow');
+		$('#hoster-2,#hoster-2-c').hide('slow');
+		$('#hoster-1,#hoster-1-c').show('slow');
 	});
 });
