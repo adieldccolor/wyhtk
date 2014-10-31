@@ -1,4 +1,4 @@
-var app, modalTemplate = {};
+var app, modalTemplate = {}, owl;
 
 app = {
 	hosterModal: {
@@ -91,7 +91,30 @@ app = {
 
 
 $(function(){
-	$('.carousel').carousel();
+	// $('.carousel').carousel();
+	
+
+	 owl = $("#owl-demo");
+	  owl.owlCarousel({
+	      autoPlay: 3000, //Set AutoPlay to 3 seconds
+	      items : 4,
+	      itemsDesktop : [1199,4],
+	      itemsDesktopSmall : [979,3],
+	      itemsTablet : [767,2],
+	      itemsMobile : [480,1]
+	  });
+	 
+	  // Custom Navigation Events
+	  $(".next").click(function(e){
+	  	e.preventDefault();
+	  	e.stopPropagation();
+	    owl.trigger('owl.next');
+	  })
+	  $(".prev").click(function(e){
+	  	e.preventDefault();
+	  	e.stopPropagation();
+	    owl.trigger('owl.prev');
+	  })
 
 	app.init();
 

@@ -1,6 +1,16 @@
 .partners
-	height: 580px !important
+	min-height: 580px !important
 	background-color: #eeeeee
+	.carousel-container
+		position: relative
+		.btn-control
+			position: absolute
+			left: 0
+			top: 30px
+			z-index: 99
+			&.next
+				left: auto
+				right: 0
 	.container
 		h2
 			font-size: 46px
@@ -13,9 +23,6 @@
 			background-image: none
 			width: 4%			
 		img
-			display: block
-			margin-left: 60px
-			float: left
 			position: relative
 		.carousel
 			height: 100px
@@ -30,8 +37,7 @@
 				top: 27px		
 	.sponsort
 		padding: 0 100px
-		.col-md-12
-			padding-left: 50px
+		
 		h3
 			font-family: $font-second
 			font-size: 26px
@@ -44,7 +50,28 @@
 			font-weight: 600
 			font-size: 16px
 			color: #666
+		a
+			color: #666
+
+#owl-demo .item
+	margin: 3px
+
+#owl-demo .item img
+	display: block
+	max-width: 100%
+	height: auto
+	margin: 0 auto
  
-@media (min-width: 320px) and (max-width: 767px)
+@media screen and (max-width: 992px)
 	.partners
 		padding: 0
+		.sponsort
+			padding: 0
+
+
+
+@media screen and (max-width: 480px)
+	.menu-sponsor-col
+		width: 100%
+		float: none
+		display: block
