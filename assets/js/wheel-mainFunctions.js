@@ -94,7 +94,6 @@ app = {
 
 $(function(){
 	// $('.carousel').carousel();
-	
 
 	 owl = $("#owl-demo");
 	  owl.owlCarousel({
@@ -125,6 +124,17 @@ $(function(){
 	  	e.preventDefault();
 	  	e.stopPropagation();
 	    owl.trigger('owl.prev');
+	  })
+
+	  $(".next").click(function(e){
+	  	e.preventDefault();
+	  	e.stopPropagation();
+	    owls.trigger('owl.next');
+	  })
+	  $(".prev").click(function(e){
+	  	e.preventDefault();
+	  	e.stopPropagation();
+	    owls.trigger('owl.prev');
 	  })
 
 	app.init();
