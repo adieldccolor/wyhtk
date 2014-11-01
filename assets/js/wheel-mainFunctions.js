@@ -183,6 +183,8 @@ $(document).on('ready', function(){
         },
         panControl : false,
         draggable: false,
+        scaleControl: false,
+        scrollwheel: false,
         streetViewControl : false,
         mapTypeControl: false,
         overviewMapControl: false
