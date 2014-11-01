@@ -11,6 +11,12 @@ app = {
 				_self.trigger($(this));
 			});
 
+			$('body').find('.hoster').each(function(e,i,c){
+				$(this).find('[rel="hoster_modal"]').data('index',e);
+			});
+
+			_self.directions();
+
 			modalTemplate = {
 				_object: (function(){
 					return hosterModalElement;
@@ -55,6 +61,21 @@ app = {
 											.replace(/data-src/g, "src");
 			modalTemplate._object.find('.descripcion').html(newTemplate).end().addClass('md-show').prev('.container').hide();
 			$('.hosters').addClass('md-open');
+		}, directions: function(){
+			var _self = this;
+
+			$('body').on('click','.prev-host', function(e){
+				e.preventDefault(); e.stopPropagation();
+				var _current = app.hosterModal.active().data('index'), prev = _current, elems = $('body').find('[rel="hoster_modal"]');
+				prev = _current==0 ? 5 : _current - 1;
+				_self.trigger(elems.eq(prev));
+			}).on('click','.next-host', function(e){
+				e.preventDefault(); e.stopPropagation();
+				var _current = app.hosterModal.active().data('index'), next = _current, elems = $('body').find('[rel="hoster_modal"]');
+				next = _current==5 ? 0 : _current + 1;
+				_self.trigger(elems.eq(next));
+			});
+
 		}, enableClose: function(){
 			var _self = this;
 			$('.container > .icon-close').on('click',function () {
@@ -142,11 +163,13 @@ $(function(){
 	$('#btn-hoster-1').on('click',function  () {
 		$('#hoster-1,#hoster-1-c').hide(0);
 		$('#hoster-2,#hoster-2-c').show('slow');
-		$('html,body').stop(true,false).animate({scrollTop: $('#host').position().top-70},500);
 	});
 	$('#btn-hoster-2').on('click',function  () {
 		$('#hoster-2,#hoster-2-c').hide('slow');
 		$('#hoster-1,#hoster-1-c').show('slow');
+	});
+
+	$('body').on('click', '#btn-hoster-2, #btn-hoster-1, .prev-host, .next-host', function(){
 		$('html,body').stop(true,false).animate({scrollTop: $('#host').position().top-70},500);
 	});
 });
