@@ -112,7 +112,7 @@ app = {
 }
 
 
-$(function(){
+$(document).on('ready', function(){
 	// $('.carousel').carousel();
 
 	 owl = $("#owl-demo");
@@ -182,6 +182,7 @@ $(function(){
             position: 'TOP_LEFT'
         },
         panControl : false,
+        draggable: false,
         streetViewControl : false,
         mapTypeControl: false,
         overviewMapControl: false
@@ -189,9 +190,9 @@ $(function(){
 	 map.addMarker({
 		  lat: 40.75263156210269,
 		  lng: -74.00654777175829,
-		  title: 'Demo',
+		  title: 'Squeaky Wheel Media',
 		  click: function(e){
-		    alert('You clicked in this marker');
+		    // alert('You clicked in this marker');
 		  }
 		});
 

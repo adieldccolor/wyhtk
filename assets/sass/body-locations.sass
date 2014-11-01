@@ -1,12 +1,16 @@
 #maps
-	height: 500px
+	height: 100%
 	width: 100%
 	display: block
+	position: absolute
+	top: 0
+	bottom: 0
 .jumbotron
 	overflow: hidden	
 .jumbotron.locations
-	min-height: 500px
+	min-height: 200px
 	padding: 0
+	position: relative
 	//background-image: url(../img/locationbg.jpg)
 	background-position:center
 	background-repeat: no-repeat
@@ -18,7 +22,7 @@
 		width: 100%
 		height: auto
 		display: block
-		margin: -45px auto
+		margin: 80px auto
 		background-color: $button-blue
 		display: block
 		padding-top: 45px
@@ -26,7 +30,7 @@
 		max-width: 340px
 		z-index: 999
 		position: relative
-		top: -363px
+		z-index: 99
 		p
 			font-family: $font-primary
 			font-weight: 600
@@ -49,28 +53,24 @@
 
 @media screen and (max-width: 767px)
 	.jumbotron.locations
-		padding: 150px 0 0 0
+		padding: 0
 		min-height: 100px
 		.box
 			margin: 0
 			max-width: 100%
 			margin-bottom: 20px
-			top: -100px
 	#maps
-		height: 400px
+		height: 300px
 		width: 100%
 		display: block
+		position: relative
 
 
-@media screen and (max-width: 767px)
+@media screen and (max-width: 480px)
 	.jumbotron.locations
-		height: 400px
 		margin: 0
 		padding: 0
 		.box
 			margin-bottom: 0px
-			top: -50px
 	#maps
 		height: 200px
-		width: 100%
-		display: block
