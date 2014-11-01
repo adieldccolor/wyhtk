@@ -83,7 +83,6 @@ app = {
 			// $('[role="navigation"]').first().before(menuClone);
 	}, coverBackgrounds: function(){
 		$(".hosters,.hero").backstretch("assets/img/background.png");
-		$(".locations").backstretch("assets/img/locationbg.jpg");
 	}, init: function(){
 		this.hosterModal.init();
 		this.menu();
@@ -149,4 +148,28 @@ $(function(){
 		$('#hoster-1,#hoster-1-c').show('slow');
 		$('html,body').stop(true,false).animate({scrollTop: $('#host').position().top-70},500);
 	});
+	var map;
+	 map = new GMaps({
+        el: '#maps',
+        lat: 40.7521094,
+        lng: -74.0000863,
+        zoom: 16,
+        zoomControlOpt: {
+            style : 'SMALL',
+            position: 'TOP_LEFT'
+        },
+        panControl : false,
+        streetViewControl : false,
+        mapTypeControl: false,
+        overviewMapControl: false
+      });
+	 map.addMarker({
+		  lat: 40.75263156210269,
+		  lng: -74.00654777175829,
+		  title: 'Demo',
+		  click: function(e){
+		    alert('You clicked in this marker');
+		  }
+		});
+
 });
